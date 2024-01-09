@@ -12,3 +12,4 @@ style==1.1.0
 tzdata==2023.4
 update==0.0.1
 whitenoise==6.6.0
+django-cors-headers=4.2.0
