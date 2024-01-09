@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-efl7^%@6dh-6dg(we-xw@lwkzmgjoc)ids@7*aa+heyiw&!2nm
 DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost']
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -40,9 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'article',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
